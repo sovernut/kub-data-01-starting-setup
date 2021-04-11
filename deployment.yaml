@@ -20,7 +20,6 @@ spec:
               name: story-volume
       volumes:
         - name: story-volume
-          hostPath:
-            path: /data # share file in NodeWorker
-            type: DirectoryOrCreate # create if not exists
+          persistentVolumeClaim:
+            claimName: host-pvc
   
